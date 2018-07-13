@@ -1,5 +1,5 @@
 <ion-header>
-  <ion-navbar>
+  <ion-navbar color="primary">
     <ion-searchbar [(ngModel)]="term" (ionInput)="buscar()" debounce="100" ></ion-searchbar>
       <button ion-button menuToggle>
           <ion-icon name="menu"></ion-icon>
@@ -7,14 +7,12 @@
   </ion-navbar>
 </ion-header>
 <ion-content padding>
-  
-  
 <ion-list>
 <button ion-item *ngFor="let pais of _paises.paises$ | async" (click)="openDetalle(pais)">
   <ion-avatar item-start>
     <img src="{{pais.flag}}">
   </ion-avatar>
-  <h2> {{pais.name}} </h2>
+  <h2 > {{pais.name | notnull: '-' }} </h2>
   <button ion-button clear item-end>Ver</button>
 </button>
 </ion-list>

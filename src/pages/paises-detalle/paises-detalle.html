@@ -5,12 +5,12 @@
   Ionic pages and navigation.
 -->
 <ion-header>
-  <ion-navbar>
+  <ion-navbar color="primary">
     <ion-title>Detalle</ion-title>
   </ion-navbar>
 </ion-header>
 <ion-content padding>
-  <ion-toolbar no-border-top>
+  <ion-toolbar no-border-top >
     <ion-segment [(ngModel)]="paises" class="bar bar-header bar-calm">
       <ion-segment-button value="Geografia">
         Geografia
@@ -25,32 +25,32 @@
     <ion-list *ngSwitchCase="'Geografia'">
       <ion-item>
         <h2>
-          Poblacion : {{pais.population}}
+          Poblacion : {{pais.population | trim | separadormiles }}
         </h2>
       </ion-item>
       <ion-item>
-        <h2>Region : {{pais.region}}
+        <h2>Region : {{pais.region }}
         </h2>
       </ion-item>
       <ion-item>
-        <h2>SubRegion : {{pais.subregion}}</h2>
+        <h2>SubRegion : {{pais.subregion }}</h2>
       </ion-item>
     </ion-list>
     <ion-list *ngSwitchCase="'Otros'">
       <ion-item>
-        <h2>Dominio : {{pais.topLevelDomain}}</h2>
+        <h2>Dominio : {{pais.topLevelDomain  }}</h2>
       </ion-item>
       <ion-item>
-        <h2>Codigo Numerico : {{pais.numericCode}}</h2>
+        <h2>Codigo Numerico : {{pais.numericCode  }}</h2>
       </ion-item>
       <ion-item *ngFor="let mon of pais.currencies ">
-        <h2 >Moneda : {{mon.name}}</h2>
+        <h2 >Moneda : {{mon.name  }}</h2>
       </ion-item>
       <ion-item>
-        <h2>Codigo de Llamada : {{pais.callingCodes}}</h2>
+        <h2>Codigo de Llamada : {{pais.callingCodes   }}</h2>
       </ion-item>
       <ion-item   >
-        <h2>Lenguas:</h2>  <h2 *ngFor="let len of pais.languages "> {{len.name}} </h2>  
+        <h2>Lenguas:</h2>  <h2 *ngFor="let len of pais.languages "> {{len.name }} </h2>  
       </ion-item>
     </ion-list>
   </div>

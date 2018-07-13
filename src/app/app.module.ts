@@ -12,6 +12,8 @@ import {NgxModelModule} from 'ngx-model';
 import { RestApiService } from '../services/rest-api.service';
 import { PaisesService } from '../services/paises/paises.service';
 import { HttpClientModule } from '@angular/common/http';
+import { Network } from '@ionic-native/network';
+
 
 
 @NgModule({
@@ -24,7 +26,8 @@ import { HttpClientModule } from '@angular/common/http';
     BrowserModule,
     IonicModule.forRoot(MyApp),
     NgxModelModule,
-    HttpClientModule
+    HttpClientModule,
+    
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -37,7 +40,8 @@ import { HttpClientModule } from '@angular/common/http';
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     RestApiService,
-    PaisesService
+    PaisesService,
+    Network
     
   ]
 })
