@@ -28,6 +28,7 @@ import { Network } from '@ionic-native/network';
     NgxModelModule,
     HttpClientModule,
     
+    
   ],
   bootstrap: [IonicApp],
   entryComponents: [

@@ -25,10 +25,21 @@ term: string ="";
     this.navCtrl.push('PaisesDetallePage', pais);
   }
 
-buscar(){
+// buscar(){
 
-  this._paises.buscar(this.term);
+//   this._paises.buscar(this.term);
+// }
+
+
+buscar ( texto:string  ){
+  
+  this._paises.buscar(texto);
+
+  //console.log(texto);
+
+
 }
+
 
 
 }

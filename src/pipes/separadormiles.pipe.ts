@@ -12,7 +12,7 @@ export class SeparadormilesPipe implements PipeTransform {
   /**
    * Takes a value and makes it lowercase.
    */
-  transform(value: any) {
+  transform(value: number) :string {
     return value.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");;
   }
 }

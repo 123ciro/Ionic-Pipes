@@ -19,6 +19,7 @@ export class PaisesDetallePage {
 pais :any = [];
 paises :String="Geografia";
 
+  
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
     this.pais= this.navParams.data

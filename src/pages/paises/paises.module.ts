@@ -4,6 +4,7 @@ import { PaisesPage } from './paises';
 import { PaisesService } from '../../services/paises/paises.service';
 import { HttpClientModule } from '@angular/common/http';
 import { PipesModule } from '../../pipes/pipes.module';
+import { ComponentsModule } from '../../components/components.module';
 
 @NgModule({
   declarations: [
@@ -13,6 +14,7 @@ import { PipesModule } from '../../pipes/pipes.module';
     IonicPageModule.forChild(PaisesPage),
     HttpClientModule,
     PipesModule,
+    ComponentsModule
     
   ],
   providers:[
